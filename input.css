@@ -76,7 +76,7 @@ input[type="text"] {font:15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 .ipt-background-slide-in,
 .ipt-background-from-left,
 .ipt-background-from-center,
-.ipt-background-from-left-right,
+.ipt-background-from-left-and-right,
 .ipt-background-from-pointers,
 .ipt-background-from-center-pointer { padding: 7px 15px; border: 1px solid #ccc; position: relative; background: transparent; }
 
@@ -89,11 +89,11 @@ input[type="text"] {font:15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 .ipt-background-from-center ~ .ipt-focus { position: absolute; left: 50%; top: 0; width: 0; height: 100%; background-color: #ededed; transition: 0.3s; z-index: -1; }
 .ipt-background-from-center:focus ~ .ipt-focus { width: 100%; left: 0; }
 
-.ipt-background-from-left-right ~ .ipt-focus:before,
-.ipt-background-from-left-right ~ .ipt-focus:after{ content: ''; position: absolute; left: 0; top: 0; width: 0; height: 100%; background: #ededed; transition: 0.3s; z-index: -1; }
-.ipt-background-from-left-right ~ .ipt-focus:after { left: auto; right: 0; }
-.ipt-background-from-left-right:focus ~ .ipt-focus:before,
-.ipt-background-from-left-right:focus ~ .ipt-focus:after { width: 50%; }
+.ipt-background-from-left-and-right ~ .ipt-focus:before,
+.ipt-background-from-left-and-right ~ .ipt-focus:after{ content: ''; position: absolute; left: 0; top: 0; width: 0; height: 100%; background: #ededed; transition: 0.3s; z-index: -1; }
+.ipt-background-from-left-and-right ~ .ipt-focus:after { left: auto; right: 0; }
+.ipt-background-from-left-and-right:focus ~ .ipt-focus:before,
+.ipt-background-from-left-and-right:focus ~ .ipt-focus:after { width: 50%; }
 
 .ipt-background-from-pointers ~ .ipt-focus:before,
 .ipt-background-from-pointers ~ .ipt-focus:after { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 0; background-color: #ededed; transition: 0.3s; z-index: -1; }
@@ -106,3 +106,29 @@ input[type="text"] {font:15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 .ipt-background-from-center-pointer ~ .ipt-focus:after { left: auto; right: 50%; top: auto; bottom: 50%; }
 .ipt-background-from-center-pointer:focus ~ .ipt-focus:before { width: 50%; height: 100%; top: 0; left: 0;}
 .ipt-background-from-center-pointer:focus ~ .ipt-focus:after { width: 50%; height: 100%; bottom: 0; right: 0;}
+
+.ipt-label-with-underline-from-left { border: 0; padding: 4px 0; border-bottom: 1px solid #ccc; background-color: transparent;}
+.ipt-label-with-underline-from-left ~ .ipt-focus { position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s; }
+.ipt-label-with-underline-from-left ~ label { position: absolute; left: 0; top: 9px; width: 100%; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px; }
+.ipt-label-with-underline-from-left:focus ~ .ipt-focus { width: 100%; }
+.ipt-label-with-underline-from-left:focus ~ label { top: -16px; font-size: 12px; color: #4caf50; }
+
+.ipt-label-with-border-from-center { border: 1px solid #ccc; padding: 7px 14px; transition: 0.4s; background: transparent; }
+.ipt-label-with-border-from-center ~ .ipt-focus:before,
+.ipt-label-with-border-from-center ~ .ipt-focus:after { content: ''; position: absolute;top: -1px; left: 50%; width: 0; height: 2px; background-color: #4caf50; transition:0.4s; }
+.ipt-label-with-border-from-center ~ .ipt-focus:after{ top: auto; bottom: 0; }
+.ipt-label-with-border-from-center ~ .ipt-focus i:before,
+.ipt-label-with-border-from-center ~ .ipt-focus i:after { content: ''; position: absolute; top: 50%; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.6s; }
+.ipt-label-with-border-from-center ~ .ipt-focus i:after { left: auto; right: 0; }
+.ipt-label-with-border-from-center ~ label { position: absolute; top: 10px; left: 14px; width: 100%; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px; }
+.ipt-label-with-border-from-center:focus ~ .ipt-focus:before,
+.ipt-label-with-border-from-center:focus ~ .ipt-focus:after { left: 0; width: 100%; }
+.ipt-label-with-border-from-center:focus ~ .ipt-focus i:before,
+.ipt-label-with-border-from-center:focus ~ .ipt-focus i:after { top: -1px; height: 100%; }
+.ipt-label-with-border-from-center:focus ~ label { top: -18px; left: 0; font-size: 12px; color: #4caf50; }
+
+.ipt-label-with-background-from-left { border: 0; padding: 7px 15px; border: 1px solid #ccc; position: relative; background: transparent; }
+.ipt-label-with-background-from-left ~ .ipt-focus { position: absolute; left: 0; top: 0; width: 0; height: 100%; background-color: transparent; transition: 0.4s; z-index: -1; }
+.ipt-label-with-background-from-left ~ label { position: absolute; left: 14px; top: 10px; width: 100%; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px; }
+.ipt-label-with-background-from-left:focus ~ .ipt-focus { width: 100%; background-color: #ededed; }
+.ipt-label-with-background-from-left:focus ~ label { top: -18px; left: 0; font-size: 12px; color: #4caf50; }
