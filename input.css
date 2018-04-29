@@ -16,3 +16,20 @@ input[type="text"] {font:15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 
 .ipt-underline-from-right ~ .ipt-focus-border { position: absolute; bottom: 0; left: 100%; width: 0; height: 2px; background-color: #4caf50; transition:0.4s;}
 .ipt-underline-from-right:focus ~ .ipt-focus-border { width: 100%; left: 0;}
+
+.ipt-border-from-bottom,
+.ipt-border-from-left,
+.ipt-border-from-right { border: 0; padding: 5px 0 7px; border: 1px solid transparent; border-bottom-color: #ccc; transition: 0.4s;}
+
+.ipt-border-from-bottom:focus,
+.ipt-border-from-left:focus,
+.ipt-border-from-right:focus { padding: 5px 14px 7px; transition: 0.4s }
+
+.ipt-border-from-bottom ~ .ipt-focus-border { position: absolute; height: 0; bottom: 0;left: 0; width: 100%; transition: 0.4s; z-index: -1; }
+.ipt-border-from-bottom:focus ~ .ipt-focus-border { height: 36px; border: 2px solid #4caf50; z-index: 1; }
+
+.ipt-border-from-left ~ .ipt-focus-border { position: absolute; height: 36px; bottom: 0; left: 0; width: 0; transition: 0.4s; }
+.ipt-border-from-left:focus ~ .ipt-focus-border { width: 100%; border: 2px solid #4caf50;}
+
+.ipt-border-from-right ~ .ipt-focus-border { position: absolute; height: 36px; bottom: 0; right: 0; width: 0; transition: 0.4s; }
+.ipt-border-from-right:focus ~ .ipt-focus-border { width: 100%; border: 2px solid #4caf50; }
