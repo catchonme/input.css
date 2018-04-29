@@ -1,0 +1,32 @@
+/**
+需要把 bootstrap 的 container, row 分离出来，放到这里来
+这样就不用引用 bootstrap.css 文件了
+
+github 搜索 bootstrap grid 布局，应该是这个
+*/
+
+h2 {
+    font-weight: 400;
+    color: #4caf50;
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+}
+h2:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    top: 22px;
+    background: #4caf50;
+    height: 1px;
+}
+h2 i {
+    font-style: normal;
+    background: #fff;
+    position: relative;
+    padding: 10px;
+}
+:focus {
+    outline: none;
+}

@@ -1,0 +1,18 @@
+input[type="text"] {font:15px/24px 'Muli', sans-serif; color: #333; width: 100%; box-sizing: border-box;letter-spacing: 1px;}
+
+:focus {outline: none;}
+
+.col-3 {float:left;width: 27.33%; margin: 40px 3%; position: relative;}
+
+.ipt-underline-from-left,
+.ipt-underline-from-center,
+.ipt-underline-from-right { border: 0; paddig: 7px 0; border-bottom: 1px solid #ccc;}
+
+.ipt-underline-from-left ~ .ipt-focus-border { position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
+.ipt-underline-from-left:focus ~ .ipt-focus-border { width: 100%; }
+
+.ipt-underline-from-center ~ .ipt-focus-border { position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
+.ipt-underline-from-center:focus ~ .ipt-focus-border { width: 100%; left: 0;}
+
+.ipt-underline-from-right ~ .ipt-focus-border { position: absolute; bottom: 0; left: 100%; width: 0; height: 2px; background-color: #4caf50; transition:0.4s;}
+.ipt-underline-from-right:focus ~ .ipt-focus-border { width: 100%; left: 0;}
