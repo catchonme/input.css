@@ -33,3 +33,42 @@ input[type="text"] {font:15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 
 .ipt-border-from-right ~ .ipt-focus-border { position: absolute; height: 36px; bottom: 0; right: 0; width: 0; transition: 0.4s; }
 .ipt-border-from-right:focus ~ .ipt-focus-border { width: 100%; border: 2px solid #4caf50; }
+
+.ipt-border-from-center,
+.ipt-border-from-pointers,
+.ipt-border-from-pointer { border: 1px solid #ccc; padding: 7px 14px 9px; }
+
+.ipt-border-from-center ~ .ipt-focus-border:before,
+.ipt-border-from-center ~ .ipt-focus-border:after { content: ''; position: absolute; top: 0; left: 50%; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s; }
+.ipt-border-from-center ~ .ipt-focus-border:after { top: auto; bottom: 0;}
+.ipt-border-from-center ~ .ipt-focus-border i:before,
+.ipt-border-from-center ~ .ipt-focus-border i:after { content: ''; position: absolute; top: 50%; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.6s; }
+.ipt-border-from-center ~ .ipt-focus-border i:after { left: auto; right: 0; }
+.ipt-border-from-center:focus ~ .ipt-focus-border:before,
+.ipt-border-from-center:focus ~ .ipt-focus-border:after { left: 0; width: 100%; }
+.ipt-border-from-center:focus ~ .ipt-focus-border i:before,
+.ipt-border-from-center:focus ~ .ipt-focus-border i:after { top: 0; height: 100%;}
+
+.ipt-border-from-pointers ~ .ipt-focus-border:before,
+.ipt-border-from-pointers ~ .ipt-focus-border:after { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.3s; }
+.ipt-border-from-pointers ~ .ipt-focus-border:after { top: auto; bottom: 0; left: auto; right: 0; }
+.ipt-border-from-pointers ~ .ipt-focus-border i:before,
+.ipt-border-from-pointers ~ .ipt-focus-border i:after { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.4s; }
+.ipt-border-from-pointers ~ .ipt-focus-border i:after { left: auto; right: 0; top: auto; bottom: 0;}
+.ipt-border-from-pointers:focus ~ .ipt-focus-border:before,
+.ipt-border-from-pointers:focus ~ .ipt-focus-border:after { width: 100%; }
+.ipt-border-from-pointers:focus ~ .ipt-focus-border i:before,
+.ipt-border-from-pointers:focus ~ .ipt-focus-border i:after { height: 100%; }
+
+.ipt-border-from-pointer ~ .ipt-focus-border:before,
+.ipt-border-from-pointer ~ .ipt-focus-border:after { content: ''; position: absolute; top: 0; right: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.2s; }
+.ipt-border-from-pointer ~ .ipt-focus-border:after { top: auto; bottom: 0; right: auto; left: 0; transition-delay: 0.4s; }
+.ipt-border-from-pointer ~ .ipt-focus-border i:before,
+.ipt-border-from-pointer ~ .ipt-focus-border i:after { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.2s; transition-delay: 0.6s; }
+.ipt-border-from-pointer ~ .ipt-focus-border i:after { left: auto; right: 0; top: auto; bottom: 0; transition-delay: 0.2s; }
+.ipt-border-from-pointer:focus ~ .ipt-focus-border:before,
+.ipt-border-from-pointer:focus ~ .ipt-focus-border:after { width: 100%; transition: 0.2s; transition-delay: 0.6s;}
+.ipt-border-from-pointer:focus ~ .ipt-focus-border:after { transition-delay: 0.2s; }
+.ipt-border-from-pointer:focus ~ .ipt-focus-border i:before,
+.ipt-border-from-pointer:focus ~ .ipt-focus-border i:after { height: 100%; transition: 0.2s; }
+.ipt-border-from-pointer:focus ~ .ipt-focus-border i:after { transition-delay: 0.4s; }
