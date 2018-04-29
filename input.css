@@ -8,14 +8,14 @@ input[type="text"] {font:15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 .ipt-underline-from-center,
 .ipt-underline-from-right { border: 0; paddig: 7px 0; border-bottom: 1px solid #ccc;}
 
-.ipt-underline-from-left ~ .ipt-focus-border { position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
-.ipt-underline-from-left:focus ~ .ipt-focus-border { width: 100%; }
+.ipt-underline-from-left ~ .ipt-focus { position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
+.ipt-underline-from-left:focus ~ .ipt-focus { width: 100%; }
 
-.ipt-underline-from-center ~ .ipt-focus-border { position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
-.ipt-underline-from-center:focus ~ .ipt-focus-border { width: 100%; left: 0;}
+.ipt-underline-from-center ~ .ipt-focus { position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
+.ipt-underline-from-center:focus ~ .ipt-focus { width: 100%; left: 0;}
 
-.ipt-underline-from-right ~ .ipt-focus-border { position: absolute; bottom: 0; left: 100%; width: 0; height: 2px; background-color: #4caf50; transition:0.4s;}
-.ipt-underline-from-right:focus ~ .ipt-focus-border { width: 100%; left: 0;}
+.ipt-underline-from-right ~ .ipt-focus { position: absolute; bottom: 0; left: 100%; width: 0; height: 2px; background-color: #4caf50; transition:0.4s;}
+.ipt-underline-from-right:focus ~ .ipt-focus { width: 100%; left: 0;}
 
 .ipt-border-from-bottom,
 .ipt-border-from-left,
@@ -25,50 +25,66 @@ input[type="text"] {font:15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 .ipt-border-from-left:focus,
 .ipt-border-from-right:focus { padding: 5px 14px 7px; transition: 0.4s }
 
-.ipt-border-from-bottom ~ .ipt-focus-border { position: absolute; height: 0; bottom: 0;left: 0; width: 100%; transition: 0.4s; z-index: -1; }
-.ipt-border-from-bottom:focus ~ .ipt-focus-border { height: 36px; border: 2px solid #4caf50; z-index: 1; }
+.ipt-border-from-bottom ~ .ipt-focus { position: absolute; height: 0; bottom: 0;left: 0; width: 100%; transition: 0.4s; z-index: -1; }
+.ipt-border-from-bottom:focus ~ .ipt-focus { height: 36px; border: 2px solid #4caf50; z-index: 1; }
 
-.ipt-border-from-left ~ .ipt-focus-border { position: absolute; height: 36px; bottom: 0; left: 0; width: 0; transition: 0.4s; }
-.ipt-border-from-left:focus ~ .ipt-focus-border { width: 100%; border: 2px solid #4caf50;}
+.ipt-border-from-left ~ .ipt-focus { position: absolute; height: 36px; bottom: 0; left: 0; width: 0; transition: 0.4s; }
+.ipt-border-from-left:focus ~ .ipt-focus { width: 100%; border: 2px solid #4caf50;}
 
-.ipt-border-from-right ~ .ipt-focus-border { position: absolute; height: 36px; bottom: 0; right: 0; width: 0; transition: 0.4s; }
-.ipt-border-from-right:focus ~ .ipt-focus-border { width: 100%; border: 2px solid #4caf50; }
+.ipt-border-from-right ~ .ipt-focus { position: absolute; height: 36px; bottom: 0; right: 0; width: 0; transition: 0.4s; }
+.ipt-border-from-right:focus ~ .ipt-focus { width: 100%; border: 2px solid #4caf50; }
 
 .ipt-border-from-center,
 .ipt-border-from-pointers,
 .ipt-border-from-pointer { border: 1px solid #ccc; padding: 7px 14px 9px; }
 
-.ipt-border-from-center ~ .ipt-focus-border:before,
-.ipt-border-from-center ~ .ipt-focus-border:after { content: ''; position: absolute; top: 0; left: 50%; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s; }
-.ipt-border-from-center ~ .ipt-focus-border:after { top: auto; bottom: 0;}
-.ipt-border-from-center ~ .ipt-focus-border i:before,
-.ipt-border-from-center ~ .ipt-focus-border i:after { content: ''; position: absolute; top: 50%; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.6s; }
-.ipt-border-from-center ~ .ipt-focus-border i:after { left: auto; right: 0; }
-.ipt-border-from-center:focus ~ .ipt-focus-border:before,
-.ipt-border-from-center:focus ~ .ipt-focus-border:after { left: 0; width: 100%; }
-.ipt-border-from-center:focus ~ .ipt-focus-border i:before,
-.ipt-border-from-center:focus ~ .ipt-focus-border i:after { top: 0; height: 100%;}
+.ipt-border-from-center ~ .ipt-focus:before,
+.ipt-border-from-center ~ .ipt-focus:after { content: ''; position: absolute; top: 0; left: 50%; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s; }
+.ipt-border-from-center ~ .ipt-focus:after { top: auto; bottom: 0;}
+.ipt-border-from-center ~ .ipt-focus i:before,
+.ipt-border-from-center ~ .ipt-focus i:after { content: ''; position: absolute; top: 50%; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.6s; }
+.ipt-border-from-center ~ .ipt-focus i:after { left: auto; right: 0; }
+.ipt-border-from-center:focus ~ .ipt-focus:before,
+.ipt-border-from-center:focus ~ .ipt-focus:after { left: 0; width: 100%; }
+.ipt-border-from-center:focus ~ .ipt-focus i:before,
+.ipt-border-from-center:focus ~ .ipt-focus i:after { top: 0; height: 100%;}
 
-.ipt-border-from-pointers ~ .ipt-focus-border:before,
-.ipt-border-from-pointers ~ .ipt-focus-border:after { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.3s; }
-.ipt-border-from-pointers ~ .ipt-focus-border:after { top: auto; bottom: 0; left: auto; right: 0; }
-.ipt-border-from-pointers ~ .ipt-focus-border i:before,
-.ipt-border-from-pointers ~ .ipt-focus-border i:after { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.4s; }
-.ipt-border-from-pointers ~ .ipt-focus-border i:after { left: auto; right: 0; top: auto; bottom: 0;}
-.ipt-border-from-pointers:focus ~ .ipt-focus-border:before,
-.ipt-border-from-pointers:focus ~ .ipt-focus-border:after { width: 100%; }
-.ipt-border-from-pointers:focus ~ .ipt-focus-border i:before,
-.ipt-border-from-pointers:focus ~ .ipt-focus-border i:after { height: 100%; }
+.ipt-border-from-pointers ~ .ipt-focus:before,
+.ipt-border-from-pointers ~ .ipt-focus:after { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.3s; }
+.ipt-border-from-pointers ~ .ipt-focus:after { top: auto; bottom: 0; left: auto; right: 0; }
+.ipt-border-from-pointers ~ .ipt-focus i:before,
+.ipt-border-from-pointers ~ .ipt-focus i:after { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.4s; }
+.ipt-border-from-pointers ~ .ipt-focus i:after { left: auto; right: 0; top: auto; bottom: 0;}
+.ipt-border-from-pointers:focus ~ .ipt-focus:before,
+.ipt-border-from-pointers:focus ~ .ipt-focus:after { width: 100%; }
+.ipt-border-from-pointers:focus ~ .ipt-focus i:before,
+.ipt-border-from-pointers:focus ~ .ipt-focus i:after { height: 100%; }
 
-.ipt-border-from-pointer ~ .ipt-focus-border:before,
-.ipt-border-from-pointer ~ .ipt-focus-border:after { content: ''; position: absolute; top: 0; right: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.2s; }
-.ipt-border-from-pointer ~ .ipt-focus-border:after { top: auto; bottom: 0; right: auto; left: 0; transition-delay: 0.4s; }
-.ipt-border-from-pointer ~ .ipt-focus-border i:before,
-.ipt-border-from-pointer ~ .ipt-focus-border i:after { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.2s; transition-delay: 0.6s; }
-.ipt-border-from-pointer ~ .ipt-focus-border i:after { left: auto; right: 0; top: auto; bottom: 0; transition-delay: 0.2s; }
-.ipt-border-from-pointer:focus ~ .ipt-focus-border:before,
-.ipt-border-from-pointer:focus ~ .ipt-focus-border:after { width: 100%; transition: 0.2s; transition-delay: 0.6s;}
-.ipt-border-from-pointer:focus ~ .ipt-focus-border:after { transition-delay: 0.2s; }
-.ipt-border-from-pointer:focus ~ .ipt-focus-border i:before,
-.ipt-border-from-pointer:focus ~ .ipt-focus-border i:after { height: 100%; transition: 0.2s; }
-.ipt-border-from-pointer:focus ~ .ipt-focus-border i:after { transition-delay: 0.4s; }
+.ipt-border-from-pointer ~ .ipt-focus:before,
+.ipt-border-from-pointer ~ .ipt-focus:after { content: ''; position: absolute; top: 0; right: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.2s; }
+.ipt-border-from-pointer ~ .ipt-focus:after { top: auto; bottom: 0; right: auto; left: 0; transition-delay: 0.4s; }
+.ipt-border-from-pointer ~ .ipt-focus i:before,
+.ipt-border-from-pointer ~ .ipt-focus i:after { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.2s; transition-delay: 0.6s; }
+.ipt-border-from-pointer ~ .ipt-focus i:after { left: auto; right: 0; top: auto; bottom: 0; transition-delay: 0.2s; }
+.ipt-border-from-pointer:focus ~ .ipt-focus:before,
+.ipt-border-from-pointer:focus ~ .ipt-focus:after { width: 100%; transition: 0.2s; transition-delay: 0.6s;}
+.ipt-border-from-pointer:focus ~ .ipt-focus:after { transition-delay: 0.2s; }
+.ipt-border-from-pointer:focus ~ .ipt-focus i:before,
+.ipt-border-from-pointer:focus ~ .ipt-focus i:after { height: 100%; transition: 0.2s; }
+.ipt-border-from-pointer:focus ~ .ipt-focus i:after { transition-delay: 0.4s; }
+
+.ipt-background-slide-in,
+.ipt-background-from-left,
+.ipt-background-from-center,
+.ipt-background-from-left-right,
+.ipt-background-from-pointers,
+.ipt-background-from-center-pointer { padding: 7px 15px; border: 1px solid #ccc; position: relative; background: transparent; }
+
+.ipt-background-slide-in ~ .ipt-focus { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #ededed; opacity: 0; transition: 0.5s; z-index: -1; }
+.ipt-background-slide-in:focus ~ .ipt-focus { opacity: 1; }
+
+.ipt-background-from-left ~ .ipt-focus { position: absolute; left: 0; top: 0; width: 0; height: 100%; background: #ededed; transition: 0.3s; z-index: -1; }
+.ipt-background-from-left:focus ~ .ipt-focus { width: 100%; }
+
+.ipt-background-from-center ~ .ipt-focus { position: absolute; left: 50%; top: 0; width: 0; height: 100%; background-color: #ededed; transition: 0.3s; z-index: -1; }
+.ipt-background-from-center:focus ~ .ipt-focus { width: 100%; left: 0; }
