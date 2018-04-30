@@ -132,3 +132,18 @@ input[type="text"] {font:15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 .ipt-label-with-background-from-left ~ label { position: absolute; left: 14px; top: 10px; width: 100%; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px; }
 .ipt-label-with-background-from-left:focus ~ .ipt-focus { width: 100%; background-color: #ededed; }
 .ipt-label-with-background-from-left:focus ~ label { top: -18px; left: 0; font-size: 12px; color: #4caf50; }
+
+.ipt-label-with-basic-slide { padding: 7px 15px; border: 1px solid #ccc; text-indent: 70px; transition: all 0.3s ease-in-out; position: relative; }
+.ipt-label-with-basic-slide ~ label { display: inline-block; position: absolute; top: 0; left: 0; padding: 10px 15px; background-color: #4caf50; transition: all 0.3s ease-in-out; }
+.ipt-label-with-basic-slide:focus { text-indent: 0; }
+.ipt-label-with-basic-slide:focus ~ label { transform: translateX(-100%); }
+
+.ipt-label-with-clear-slide { padding: 7px 15px; border: 1px solid #ccc; position: relative; text-indent: 70px; transition: all 0.3s ease-in-out; }
+.ipt-label-with-clear-slide ~ label { display: inline-block; position: absolute; top: 0; left: 0; padding: 10px 15px; transition: all 0.3s ease-in-out; }
+.ipt-label-with-clear-slide:focus { text-indent: 0; }
+.ipt-label-with-clear-slide:focus ~ label { transform: translateX(-100%); background-color: #4caf50;}
+
+.ipt-label-with-rotate { padding: 7px 15px; border: 1px solid #ccc; text-indent: 70px; transition: all 0.3s ease-in-out; position: relative; }
+.ipt-label-with-rotate ~ label { display: inline-block; position: absolute; top: 0; left: 0; padding: 10px 15px; background-color: #4caf50; transition: all 0.3s ease-in-out; transform-origin: left bottom;}
+.ipt-label-with-rotate:focus { text-indent: 0; }
+.ipt-label-with-rotate:focus ~ label { transform: rotate(-66deg); }
