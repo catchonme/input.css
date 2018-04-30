@@ -147,3 +147,31 @@ input[type="text"] {font:15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 .ipt-label-with-rotate ~ label { display: inline-block; position: absolute; top: 0; left: 0; padding: 10px 15px; background-color: #4caf50; transition: all 0.3s ease-in-out; transform-origin: left bottom;}
 .ipt-label-with-rotate:focus { text-indent: 0; }
 .ipt-label-with-rotate:focus ~ label { transform: rotate(-66deg); }
+
+.ipt-label-slide-up { padding: 7px 15px; border: 1px solid #ccc; text-indent: 70px; transition: all 0.3s ease-in-out; position: relative; }
+.ipt-label-slide-up ~ label { display: inline-block; position: absolute; top: 0; left: 0; padding: 10px 15px; background-color: #4caf50; transition: all 0.3s ease-in-out; transform-origin: left bottom;}
+.ipt-label-slide-up:focus { text-indent: 0; }
+.ipt-label-slide-up:focus ~ label { transform: translateY(-100%); }
+
+.ipt-label-slide-perspective { padding: 7px 15px; border: 1px solid #ccc; text-indent: 70px; transition: all 0.3s ease-in-out; position: relative; }
+.ipt-label-slide-perspective ~ label { display: inline-block; position: absolute; top: 0; left: 0; padding: 10px 15px; background-color: #4caf50; transition: all 0.3s ease-in-out; transform-origin: right center; transform: perspective(300px) scaleX(1) rotateY(0deg);}
+.ipt-label-slide-perspective:focus { text-indent: 0; }
+.ipt-label-slide-perspective:focus ~ label { transform: perspective(600px) translateX(-100%) rotateY(80deg); }
+
+.ipt-label-slide-swing { padding: 7px 15px; border: 1px solid #ccc; text-indent: 70px; transition: all 0.3s ease-in-out; position: relative; }
+.ipt-label-slide-swing ~ label { display: inline-block; position: absolute; top: 0; left: 0; padding: 10px 15px; background-color: #4caf50; animation: swing-back .4s 1 ease-in-out; transform-origin: top left;}
+.ipt-label-slide-swing:focus { text-indent: 0; }
+.ipt-label-slide-swing:focus ~ label { animation: swing 1.4s 1 ease-in-out; transform: rotate(82deg); }
+
+@keyframes swing {
+    0% { transform: rotate(0); }
+    20% { transform: rotate(116deg); }
+    40% { transform: rotate(60deg); }
+    60% { transform: rotate(98deg); }
+    80% { transform: rotate(76deg); }
+    100% { transform: rotate(82deg); }
+}
+@keyframes swing-back {
+    0% { transform: rotate(82deg); }
+    100% { transform: rotate(0); }
+}
